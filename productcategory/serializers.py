@@ -40,3 +40,11 @@ class CategoryProductSerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'category_name', 'product']
 
+class BulkUploadCategoryProductSerializer(serializers.Serializer):
+    '''
+    An Simple Serialier Which Takes CSV File As Inpu To Upload
+    Product By Category Name
+    '''
+    upload_file = serializers.FileField()
+    class Meta:
+        fileds = ['upload_file']
