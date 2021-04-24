@@ -17,4 +17,5 @@ def check_for_csv(self,request):
         except:
             raise ValidationError('Invalid file type')
     else:
-        raise ValidationError('Invalid file type')
+        upload_file = request.data['upload_file']
+        return upload_file
