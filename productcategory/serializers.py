@@ -35,10 +35,10 @@ class CategoryProductSerializer(serializers.ModelSerializer):
     An Category Plus Product Serializer To Display All
     Product Belong To Particular Category
     '''
-    product = ProductForImportSerializer(many=True, source='product_set')
+    products = ProductForImportSerializer(many=True)
     class Meta:
         model = Category
-        fields = ['id', 'category_name', 'product']
+        fields = ['id', 'category_name', 'products']
 
 class BulkUploadCategoryProductSerializer(serializers.Serializer):
     '''

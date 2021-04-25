@@ -1,5 +1,6 @@
 from celery import shared_task
 from .models import Product,Category
+from time import sleep
 
 @shared_task
 def do_the_work(reader):
