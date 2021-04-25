@@ -1,4 +1,4 @@
-# Nimap Machine Test DRF Project
+# Simple Task To Manage Category And Product It Contains
 
 This is simple DRF project with manages Category and their Product.
 
