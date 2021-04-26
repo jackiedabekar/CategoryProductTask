@@ -16,9 +16,20 @@ class CategoryListCreateAPIView(ListCreateAPIView):
     serializer_class = CategorySerializer
 
 
+# class ProductListCreateAPIView(ListCreateAPIView):
+#     '''
+#     This Was Sending 20 queries to get same data
+#     '''
+#     queryset = Product.objects.all().order_by('-id')
+#     serializer_class = ProductSerializer
+
 class ProductListCreateAPIView(ListCreateAPIView):
-    queryset = Product.objects.all().order_by('-id')
+    # queryset = Product.objects.all().order_by('-id')
     serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        queryset = Product.objects.select_related('category_name').order_by('-id')
+        return queryset
 
 class CategoryProductListAPIView(ListAPIView):
     # queryset = Category.objects.all()
