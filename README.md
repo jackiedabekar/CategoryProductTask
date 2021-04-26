@@ -20,7 +20,7 @@ git clone project_link
 ```shell
 pip install -r requirements.txt
 ```
-- Create A .env file in Project Root Directory For SECRET_KEY Environment, Format For Environment Given In env_template.txt
+- Create A .env file in Project Root Directory For SECRET_KEY Environment, Format For Environment As Per You Need
 
 - After Installations Of All Dependencies And Creation Of .env File, Run Project By Typing.
 ```shell
