@@ -133,8 +133,8 @@ INTERNAL_IPS = [
 ]
 
 # CELERY STUFF
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_TASK_RESULT_EXPIRES = 18000
+celery_broker_url = 'redis://localhost:6379'
+result_backend = 'redis://localhost:6379'
+accept_content = ['json']
+task_serializer = 'json'
+result_expires = 18000

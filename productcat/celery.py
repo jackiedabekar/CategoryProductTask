@@ -1,11 +1,11 @@
 import os
 from celery import Celery
-from productcat.settings import CELERY_BROKER_URL, CELERY_RESULT_BACKEND
+from productcat.settings import celery_broker_url, result_backend
 
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'productcat.settings')
 
-celery_app = Celery('productcat', broker = CELERY_BROKER_URL, backend=CELERY_RESULT_BACKEND)
+celery_app = Celery('productcat', broker = celery_broker_url, backend=result_backend)
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
