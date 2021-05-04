@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'debug_toolbar',
+    'rest_logger',
 ]
 
 MIDDLEWARE = [
@@ -46,6 +47,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'productcat.middleware.RequestLogMiddleWare',
+    'productcat.middleware.ExceptionLoggingMiddleware'
 ]
 
 ROOT_URLCONF = 'productcat.urls'
