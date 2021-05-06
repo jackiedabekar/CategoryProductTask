@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'debug_toolbar',
     'rest_logger',
+    'softdelete',
+    'testsoftdelete',
 ]
 
 MIDDLEWARE = [
